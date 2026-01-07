@@ -23,5 +23,7 @@ func TestEmployeeCodeEmployee(t *testing.T) {
 		err := obj.Validation()
 
 		g.Expect(err).ToNot(BeNil())
+		g.Expect(err.Error).ToNot(Equal("EmployeeCode must be 2 uppercase English letters (A-Z) followed by and 4 digits (0-9)"))
+
 	})
 }
