@@ -23,5 +23,6 @@ func TestSalaryEmployee(t *testing.T) {
 		err := obj.Validation()
 
 		g.Expect(err).ToNot(BeNil())
+		g.Expect(err.Error).ToNot(Equal("Salary must be between 15000 and 200000"))
 	})
 }
